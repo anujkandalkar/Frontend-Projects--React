@@ -1,0 +1,51 @@
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  padding: 100px 80px;
+  background-color: #eef1ff;
+  background-image: url("../assests/h1_hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  color: #243b7b;
+  line-height: 1.25;
+  margin-bottom: 40px;
+}
+.search-box {
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.search-box input {
+  border: none;
+  padding: 2px 22px;
+  width: 260px;
+  font-size: 14px;
+  outline:#ff2b6d;
+  
+}
+
+.search-box input::placeholder {
+  color: #777;
+}
+.search-box button {
+  background: #ff2b6d;
+  color: #ffffff;
+  border: none;
+  padding: 18px 45px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
