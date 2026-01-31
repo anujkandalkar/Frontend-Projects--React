@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -16,14 +16,34 @@ export default function Login() {
   }
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
       <div className="card p-4 shadow" style={{ width: "350px" }}>
-        <h5 className="mb-3">Admin Login</h5>
+        <h5 className="mb-3 text-center">Admin Login</h5>
 
-        <input className="form-control mb-2" placeholder="Email" onChange={e => setEmail(e.target.value)} />
-        <input className="form-control mb-3" type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+        <input
+          className="form-control mb-2"
+          type="email"
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-        <button className="btn btn-primary w-100" onClick={handleLogin}>Login</button>
+        <input
+          className="form-control mb-3"
+          type="password"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <button className="btn btn-primary w-100" onClick={handleLogin}>
+          Login
+        </button>
+
+        <p className="text-center mt-3 small">
+          Don't have an account?{" "}
+          <Link to="/register" className="text-decoration-none">
+            Register here
+          </Link>
+        </p>
       </div>
     </div>
   );
